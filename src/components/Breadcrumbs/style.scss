@@ -1,0 +1,12 @@
+.component {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  color: $gray1;
+
+  @extend .text4;
+
+  @include mq() {
+    margin: 0 10px;
+  }
+}

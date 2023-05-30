@@ -1,0 +1,25 @@
+.component {
+  border-radius: 14px;
+  background-color: $orange1;
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+
+  &.list {
+    background: url("../../../assets/images/icon/ic_list_active.png") center
+      no-repeat $orange1;
+  }
+
+  &.card {
+    background: url("../../../assets/images/icon/ic_card_active.png") center
+      no-repeat $orange1;
+  }
+
+  &:hover {
+    background-color: $orange3;
+  }
+
+  &.disabled {
+    background-color: $gray3;
+  }
+}

@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: $gray1;
+  text-align: center;
+
+  @extend .text10;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 56px;
+
+  .buttonContainer {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+}

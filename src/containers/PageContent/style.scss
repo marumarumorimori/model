@@ -1,0 +1,11 @@
+.container {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: $white1;
+
+  @include mq() {
+    margin: 0 10px;
+    padding: 20px 8px;
+    min-height: calc(100% - 84px);
+  }
+}

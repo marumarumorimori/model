@@ -1,0 +1,312 @@
+.component {
+  width: 920px;
+  color: $gray2;
+
+  @extend .text6;
+
+  @include mq() {
+    width: auto;
+  }
+}
+
+.header {
+  padding: 0 8px;
+  color: $gray1;
+  height: 40px;
+  display: flex;
+
+  @extend .text7;
+
+  @include mq() {
+    display: none;
+  }
+
+  & > .headerCol {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      padding-right: 16px;
+    }
+
+    &:nth-child(1) {
+      width: 56px;
+    }
+
+    &:nth-child(2) {
+      width: 192px;
+    }
+
+    &:nth-child(3) {
+      width: 192px;
+    }
+
+    &:nth-child(4) {
+      width: 164px;
+    }
+
+    &:nth-child(5) {
+      width: 44px;
+    }
+
+    &:nth-child(6) {
+      width: 96px;
+    }
+  }
+
+  &.userArticles {
+    .headerCol {
+      &:nth-child(2) {
+        width: 364px;
+      }
+
+      &:nth-child(3) {
+        width: 140px;
+      }
+
+      &:nth-child(4) {
+        width: 140px;
+      }
+
+      &:nth-child(5) {
+        width: 140px;
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.colComponent {
+  height: 80px;
+  padding: 2px 0;
+  border-top: solid 1px $gray4;
+
+  @include mq() {
+    height: 110px;
+
+    &:nth-child(2) {
+      border-top: none;
+    }
+  }
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 920px;
+  height: 80px;
+  padding: 0 8px;
+  color: $gray2;
+  border-radius: 8px;
+
+  @extend .text6;
+
+  &:not(:last-child) {
+    border-bottom: solid 1px $gray4;
+  }
+
+  .imageContainer {
+    margin-right: 16px;
+
+    .imageFavorite {
+      box-sizing: border-box;
+      display: none;
+      position: absolute;
+      bottom: 0;
+      color: $white1;
+      background-color: rgba($black1, 0.6);
+      width: 100%;
+      border-radius: 0 0 8px 8px;
+      padding: 0 4px 0 20px;
+
+      &::before {
+        position: absolute;
+        left: 4px;
+        top: 1px;
+        content: url("../../../assets/images/icon/ic_favorite.png");
+      }
+    }
+
+    img {
+      width: 56px;
+      height: 56px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .private {
+      position: absolute;
+
+      color: $white1;
+      width: 38px;
+      height: 18px;
+      background-color: $gray3;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 4px;
+      left: 4px;
+      font-weight: bold;
+
+      @extend .text1;
+
+      @include mq(pc) {
+        display: none;
+      }
+    }
+
+    @include mq() {
+      position: relative;
+      height: 90px;
+
+      img {
+        width: 90px;
+        height: 90px;
+      }
+
+      .imageFavorite {
+        display: block;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+
+    @include mq() {
+      flex-direction: column;
+      align-items: flex-start;
+
+      & > div {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 12px;
+      width: 12px;
+      margin-right: 4px;
+
+      @include mq(pc) {
+        display: none;
+      }
+    }
+  }
+
+  .id {
+    width: 192px;
+    margin-right: 16px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    @include mq() {
+      max-width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  .userId {
+    width: 192px;
+    margin-right: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include mq() {
+      max-width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  .userName {
+    width: 164px;
+    margin-right: 16px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    .sp {
+      display: none;
+      max-width: 100%;
+    }
+
+    @include mq() {
+      padding-left: 20px;
+
+      .sp {
+        display: block;
+      }
+
+      .pc {
+        display: none;
+      }
+    }
+  }
+
+  .favorite {
+    width: 44px;
+    margin-right: 16px;
+
+    @include mq() {
+      display: none;
+    }
+  }
+
+  .date {
+    width: 96px;
+    margin-right: 16px;
+
+    @include mq() {
+      width: 100%;
+    }
+  }
+
+  .publish {
+    width: 64px;
+
+    @include mq() {
+      display: none;
+    }
+  }
+
+  &:hover {
+    background-color: rgba(248, 161, 0, 0.2);
+  }
+
+  @include mq() {
+    display: flex;
+    height: 110px;
+    padding: 10px;
+    width: auto;
+  }
+
+  &.userArticles {
+    .id {
+      width: 364px;
+    }
+
+    .favorite {
+      width: 140px;
+    }
+
+    .date {
+      width: 140px;
+    }
+
+    .publish {
+      width: 140px;
+    }
+  }
+}

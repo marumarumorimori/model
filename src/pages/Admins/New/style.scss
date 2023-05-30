@@ -1,0 +1,80 @@
+.title {
+  color: $gray1;
+  padding-right: 24px;
+  margin-bottom: 20px;
+
+  @extend .text12;
+}
+
+.component {
+  @include mq() {
+    min-height: calc(100vh - 152px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .form {
+    display: flex;
+    padding: 28px 0;
+
+    @include mq() {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &.border {
+      border-bottom: solid 1px $gray4;
+    }
+
+    .label {
+      width: 126px;
+      color: $gray2;
+      margin-right: 16px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 2px;
+
+      @extend .text7;
+
+      img {
+        margin-left: 8px;
+      }
+    }
+
+    .textInput {
+      width: 408px;
+
+      @include mq() {
+        width: 100%;
+      }
+
+      .note {
+        color: $gray1;
+        margin: 28px 0 8px;
+
+        @extend .text2;
+
+        .break {
+          @include mq() {
+            &::after {
+              content: "\A";
+              white-space: pre;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+
+    .button {
+      width: 90px;
+      align-items: center;
+    }
+  }
+}

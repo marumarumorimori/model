@@ -1,0 +1,58 @@
+.tabContainer {
+  width: calc(100% - 20px);
+  margin: 0 10px;
+  display: none;
+
+  @include mq() {
+    display: block;
+  }
+}
+
+.tab {
+  border-radius: 0 0 8px 8px;
+
+  @include mq() {
+    display: none;
+
+    &.selected {
+      display: block;
+    }
+  }
+}
+
+.detail {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 80px;
+
+  @include mq() {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 0;
+  }
+
+  .imageContainer {
+    margin-left: 20px;
+
+    @include mq() {
+      margin-left: 0;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    img {
+      width: 300px;
+      height: 300px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+  }
+}
+
+.segmentHeader {
+  margin-bottom: 20px;
+}
+
+.pager {
+  margin-top: 20px;
+}

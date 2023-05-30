@@ -1,0 +1,195 @@
+.linkContainer {
+  border-bottom: solid 1px $gray4;
+
+  @include mq() {
+    height: 105px;
+    padding: 2px 0;
+  }
+}
+
+.itemContainer {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+
+  @include mq() {
+    height: 106px;
+  }
+
+  .item {
+    box-sizing: border-box;
+    width: 920px;
+    height: 36px;
+    color: $gray2;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    align-items: center;
+
+    @extend .text6;
+
+    @include mq() {
+      display: flex;
+      flex-direction: column;
+      height: 106px;
+      padding: 10px;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-radius: 8px;
+    }
+
+    & > div:not(:last-child) {
+      padding-right: 16px;
+
+      @include mq() {
+        padding-right: 0;
+      }
+    }
+
+    .idName {
+      display: flex;
+
+      @include mq() {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 0;
+      }
+
+      & > .id {
+        width: 186px;
+        padding-right: 16px;
+
+        @include mq() {
+          width: 100%;
+          padding-right: 0;
+          display: flex;
+          align-items: center;
+
+          &::before {
+            content: url("../../assets/images/icon/ic_user_large.png");
+            display: inline-block;
+            height: 17px;
+            padding-right: 4px;
+          }
+        }
+      }
+
+      & > .name {
+        width: 250px;
+
+        &.sp {
+          padding-left: 20px;
+          display: none;
+        }
+
+        @include mq() {
+          width: 100%;
+
+          &.sp {
+            display: block;
+          }
+
+          &.pc {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+
+      img {
+        display: none;
+
+        @include mq() {
+          display: block;
+          margin-right: 4px;
+        }
+      }
+    }
+
+    .email {
+      width: 280px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      @include mq() {
+        width: calc(100vw - 100px);
+      }
+    }
+
+    & > .createdAt {
+      width: 140px;
+
+      @include mq() {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: url("../../assets/images/icon/ic_calender_large.png");
+          padding-right: 4px;
+          display: inline-block;
+          height: 17px;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: rgba($orange1, 0.2);
+    }
+  }
+}
+
+.listHeader {
+  width: 920px;
+  height: 40px;
+  color: $gray1;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 8px;
+  border-bottom: solid 1px $gray4;
+
+  & > .id {
+    width: 186px;
+  }
+
+  & > .name {
+    width: 250px;
+  }
+
+  & > .email {
+    width: 280px;
+  }
+
+  & > .createdAt {
+    width: 140px;
+  }
+
+  @extend .text7;
+
+  & > div:not(:last-child) {
+    padding-right: 16px;
+  }
+
+  @include mq() {
+    display: none;
+  }
+}
+
+.pager {
+  margin-top: 20px;
+}
+
+.empty {
+  color: $gray2;
+  margin-top: 20px;
+
+  @extend .text8;
+}

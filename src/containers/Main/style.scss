@@ -1,0 +1,16 @@
+.component {
+  min-height: 100vh;
+  background-color: $gray5;
+}
+
+.main {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 12px;
+  min-height: calc(100vh - 72px);
+
+  @include mq() {
+    width: 100%;
+  }
+}

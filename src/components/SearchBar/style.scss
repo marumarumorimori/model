@@ -1,0 +1,46 @@
+.component {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 36px;
+  padding: 0 8px;
+  border-radius: 8px;
+  background-color: $gray5;
+  width: 230px;
+
+  &.focus {
+    padding: 0 6px;
+    border: solid 2px $orange1;
+  }
+
+  &.pc {
+    width: 230px;
+  }
+
+  &.sp {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    color: $gray1;
+    border: none;
+    outline: none;
+    background-color: $gray5;
+
+    caret-color: $orange1;
+    @extend .text4;
+
+    &::placeholder {
+      color: $gray3;
+
+      @extend .text5;
+    }
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+}

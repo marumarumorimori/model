@@ -1,0 +1,13 @@
+.buttonContainer {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+
+  .secondary {
+    margin-right: 16px;
+  }
+
+  .button {
+    width: 90px;
+  }
+}

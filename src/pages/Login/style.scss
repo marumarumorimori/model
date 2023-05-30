@@ -1,0 +1,81 @@
+.component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: $gray5;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: $white1;
+  width: 800px;
+  height: 524px;
+
+  .input {
+    width: 280px;
+    margin-bottom: 20px;
+  }
+
+  .errorMessage {
+    color: $red1;
+    line-height: 18px;
+    margin-bottom: 26px;
+
+    @extend .text8;
+  }
+
+  .login {
+    box-sizing: border-box;
+    width: 246px;
+    margin: 16px 0;
+  }
+
+  .forget {
+    width: 246px;
+  }
+
+  .logo {
+    margin-bottom: 72px;
+
+    &.isError {
+      margin-bottom: 28px;
+    }
+
+    img {
+      width: 121px;
+      height: 60px;
+    }
+  }
+
+  @include mq() {
+    width: 100%;
+    height: 524px;
+    margin: 20px 10px;
+    padding-right: 38px;
+    padding-left: 38px;
+
+    .logo {
+      margin-bottom: 72px;
+    }
+
+    .input {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .buttonContainer {
+      width: 100%;
+      text-align: center;
+
+      .login {
+        width: calc(100% - 56px);
+      }
+    }
+  }
+}

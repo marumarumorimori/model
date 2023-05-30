@@ -1,0 +1,17 @@
+.component {
+  display: flex;
+  justify-content: space-between;
+
+  .title {
+    padding-right: 24px;
+    color: $gray1;
+
+    @extend .text12;
+  }
+
+  .publish {
+    .button {
+      width: 92px;
+    }
+  }
+}

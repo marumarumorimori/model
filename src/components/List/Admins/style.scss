@@ -1,0 +1,13 @@
+.editButton {
+  width: 32px;
+  height: 32px;
+  background: url("../../../assets/images/icon/btn_edit_active.png") center
+    no-repeat;
+  cursor: pointer;
+  background-size: 32px;
+
+  &:hover {
+    background: url("../../../assets/images/icon/btn_edit_hover.png") center
+      no-repeat;
+  }
+}

@@ -1,0 +1,60 @@
+.parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 36px;
+  color: $gray1;
+  cursor: pointer;
+  position: relative;
+
+  .parentText {
+    @extend .text3;
+  }
+
+  .icon {
+    width: 8px;
+    height: 8px;
+    padding-right: 8px;
+    background: url("../../assets/images/icon/ic_arrow_inactive.png") no-repeat;
+  }
+
+  &:hover {
+    color: $green1;
+
+    .icon {
+      background: url("../../assets/images/icon/ic_arrow_active.png") no-repeat;
+    }
+  }
+
+  .pulldown {
+    padding: 8px 4px;
+    position: absolute;
+  }
+
+  .selectContainer {
+    width: 150px;
+    height: 36px;
+    position: relative;
+
+    .selectButton {
+      width: 150px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      z-index: 1;
+    }
+
+    select {
+      border: none;
+      z-index: 10;
+      width: 150px;
+      height: 36px;
+      position: absolute;
+      color: rgba(0, 0, 0, 0);
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+}

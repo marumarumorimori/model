@@ -1,0 +1,41 @@
+.component {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .message {
+    display: none;
+    font-weight: normal;
+    padding: 0 10px;
+  }
+
+  img.hint {
+    &:hover + .message {
+      display: block;
+      position: absolute;
+      background-color: #fff;
+      color: $gray1;
+      min-height: 48px;
+      min-width: 186px;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translate(-50%, -100%);
+      left: 22px;
+      top: -10px;
+
+      @extend .text8;
+    }
+
+    &:hover ~ .root {
+      display: block;
+      position: absolute;
+      transform: translate(0, -100%);
+      width: 8px;
+      height: 6px;
+      top: -4px;
+      left: 4px;
+    }
+  }
+}

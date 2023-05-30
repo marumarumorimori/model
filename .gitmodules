@@ -1,0 +1,3 @@
+[submodule "PecoriAPI-Document"]
+	path = PecoriAPI-Document
+	url = git@ghe.fenrir-inc.com:y-hirose/PecoriAPI-Document.git

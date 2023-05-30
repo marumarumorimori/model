@@ -1,0 +1,17 @@
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 56px;
+
+  .buttonContainer {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.textInput {
+  margin-bottom: 56px;
+}

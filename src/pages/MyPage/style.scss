@@ -1,0 +1,13 @@
+.page {
+  @include mq() {
+    min-height: calc(100vh - 152px);
+  }
+}
+
+.title {
+  color: $gray1;
+  padding-right: 24px;
+  margin-bottom: 20px;
+
+  @extend .text12;
+}

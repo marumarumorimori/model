@@ -1,0 +1,159 @@
+.normal {
+  width: 100%;
+  min-width: 90px;
+  height: 44px;
+  padding: 0 18px;
+  cursor: pointer;
+  border-radius: 22px;
+  outline: none;
+
+  @extend .text9;
+
+  &.primary {
+    color: $white1;
+    border: none;
+    background-color: $orange1;
+
+    &:hover {
+      background-color: $orange3;
+    }
+
+    &:disabled {
+      background-color: $gray3;
+      cursor: default;
+    }
+  }
+
+  &.secondary {
+    background-color: $white1;
+    border: solid 2px $orange1;
+    color: $orange1;
+
+    &:hover {
+      background-color: $orange4;
+    }
+
+    &.disabled,
+    &:disabled {
+      background-color: $white1;
+      border: solid 2px $gray3;
+      color: $gray3;
+    }
+  }
+}
+
+.mini {
+  width: 100%;
+  min-width: 90px;
+  height: 36px;
+  padding: 0 18px;
+  cursor: pointer;
+  border: none;
+  border-radius: 18px;
+  outline: none;
+
+  @extend .text7;
+
+  &.primary {
+    color: $white1;
+    background-color: $orange1;
+
+    &:hover {
+      background-color: $orange3;
+    }
+
+    &:disabled {
+      background-color: $gray3;
+    }
+  }
+
+  &.secondary {
+    background-color: $white1;
+    border: solid 2px $gray3;
+    color: $gray3;
+  }
+}
+
+.link {
+  min-width: 68px;
+  height: 36px;
+  padding: 0 18px;
+  cursor: pointer;
+  color: $orange2;
+  border: none;
+  border-radius: 18px;
+  outline: none;
+  background-color: $white1;
+  text-decoration: underline;
+
+  @extend .text6;
+
+  &:hover {
+    text-decoration: underline;
+    background-color: $orange4;
+  }
+
+  @include mq() {
+    text-decoration: underline;
+  }
+}
+
+.function {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 36px;
+  color: $orange2;
+  border: none;
+  border-radius: 18px;
+  outline: none;
+  background-color: $white1;
+  cursor: pointer;
+
+  @extend .text7;
+
+  img {
+    padding-right: 4px;
+  }
+
+  &:hover {
+    background-color: $orange4;
+  }
+}
+
+.trash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 86px;
+  height: 36px;
+  color: $red1;
+  border: none;
+  border-radius: 18px;
+  outline: none;
+  background-color: $white1;
+  cursor: pointer;
+
+  @extend .text7;
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    padding-right: 2px;
+    background: url("../../../assets/images/icon/ic_trash.png");
+  }
+
+  &:hover {
+    background-color: $orange4;
+  }
+
+  &:disabled {
+    color: $gray3;
+    background-color: $white1;
+
+    .icon {
+      background: url("../../../assets/images/icon/ic_trash_inacitve.png");
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.component {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: calc(100vh - 100px);
+  flex-direction: column;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: bold;
+  color: $gray2;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.text {
+  color: $gray2;
+  text-align: center;
+  margin-bottom: 48px;
+
+  @extend .text8;
+}
+
+.buttonContainer {
+  width: 160px;
+  margin: 0 auto;
+}

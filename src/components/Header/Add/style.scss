@@ -1,0 +1,47 @@
+.component {
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  @include mq() {
+    margin-bottom: 12px;
+  }
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+
+  @include mq() {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+
+  .sort {
+    padding-right: 8px;
+
+    @include mq() {
+      padding-right: 0;
+    }
+  }
+}
+
+.title {
+  color: $gray1;
+  padding-right: 24px;
+
+  @extend .text12;
+}
+
+.search {
+  @include mq() {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

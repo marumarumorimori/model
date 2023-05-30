@@ -1,0 +1,78 @@
+.component {
+  align-items: center;
+
+  @include mq() {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .main {
+    display: flex;
+    margin-bottom: 20px;
+
+    .title {
+      padding-right: 24px;
+      color: $gray1;
+
+      @extend .text12;
+    }
+
+    @include mq() {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    & > .segment {
+      display: none;
+
+      @include mq() {
+        display: block;
+      }
+    }
+  }
+
+  .sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq() {
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      margin-top: 12px;
+
+      .search {
+        width: 100%;
+      }
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      .buttonContainer {
+        margin-right: 8px;
+      }
+
+      & > .segment {
+        display: flex;
+        align-items: center;
+      }
+
+      @include mq() {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 8px;
+      }
+    }
+
+    .sort {
+      padding-right: 8px;
+
+      @include mq() {
+        padding-right: 0;
+      }
+    }
+  }
+}

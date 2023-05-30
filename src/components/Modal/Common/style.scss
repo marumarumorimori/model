@@ -1,0 +1,49 @@
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($black1, 0.5);
+  top: 0;
+  left: 0;
+  z-index: 101;
+}
+
+.modal {
+  width: 464px;
+  min-height: 292px;
+  background-color: $white1;
+  position: fixed;
+  padding: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 8px;
+  box-sizing: border-box;
+
+  justify-content: space-between;
+
+  @include mq() {
+    width: calc(100vw - 20px);
+    padding: 32px;
+  }
+}
+
+.title {
+  color: $gray1;
+  text-align: center;
+  margin-bottom: 48px;
+
+  @extend .text10;
+}
+
+.content {
+  color: $gray1;
+  text-align: center;
+  margin-bottom: 56px;
+
+  @extend .text8;
+}
